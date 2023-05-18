@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "dbdb1b3e-318c-47f7-9119-ed4453e6b24d",
+    "name": "(Global Env)",
+    "default": false,
+    "global": true,
+    "sortNum": -2,
+    "created": "2023-05-18T18:01:29.613Z",
+    "modified": "2023-05-18T18:01:29.613Z",
+    "data": [
+      {
+        "name": "baseUrl",
+        "value": "http://localhost:3333"
+      }
+    ]
+  }
+]

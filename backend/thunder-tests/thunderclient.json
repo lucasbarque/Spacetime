@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "84ea00ef-3399-4607-b5ed-c967eefe8f8c",
+    "colId": "9d9b9d6f-d2ff-4577-b769-a4754d438cf8",
+    "containerId": "343fd91d-2fc9-42af-ac09-a22fa8391785",
+    "name": "List",
+    "url": "{{baseUrl}}/memories",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-05-18T17:59:27.562Z",
+    "modified": "2023-05-18T18:01:45.531Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "76b59e01-55bb-48d1-aca6-f5fa9f45491a",
+    "colId": "9d9b9d6f-d2ff-4577-b769-a4754d438cf8",
+    "containerId": "343fd91d-2fc9-42af-ac09-a22fa8391785",
+    "name": "Get By Id",
+    "url": "{{baseUrl}}/memories/8bbd8279-4c6b-4c70-90ac-6710cc731527",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-05-18T18:08:23.519Z",
+    "modified": "2023-05-18T18:09:02.204Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "5fd4e751-595c-44c1-8958-73a07dc68e5f",
+    "colId": "9d9b9d6f-d2ff-4577-b769-a4754d438cf8",
+    "containerId": "343fd91d-2fc9-42af-ac09-a22fa8391785",
+    "name": "Create",
+    "url": "{{baseUrl}}/memories",
+    "method": "POST",
+    "sortNum": 15000,
+    "created": "2023-05-18T18:12:28.816Z",
+    "modified": "2023-05-18T18:13:30.863Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"content\": \"test\",\n  \"coverUrl\": \"https://github.com/lucasbarque.png\",\n  \"isPublic\": 1\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e856fe68-5c5e-4132-8f0e-5afd7c300bae",
+    "colId": "9d9b9d6f-d2ff-4577-b769-a4754d438cf8",
+    "containerId": "343fd91d-2fc9-42af-ac09-a22fa8391785",
+    "name": "Update",
+    "url": "{{baseUrl}}/memories/8bbd8279-4c6b-4c70-90ac-6710cc731527",
+    "method": "PUT",
+    "sortNum": 17500,
+    "created": "2023-05-18T18:15:36.649Z",
+    "modified": "2023-05-18T18:16:08.273Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"content\": \"oiii\",\n  \"coverUrl\": \"https://github.com/lucasbarque.png\",\n  \"isPublic\": 1\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "48e770e7-3917-4849-959c-07d059657d00",
+    "colId": "9d9b9d6f-d2ff-4577-b769-a4754d438cf8",
+    "containerId": "343fd91d-2fc9-42af-ac09-a22fa8391785",
+    "name": "Delete",
+    "url": "{{baseUrl}}/memories/0db5da88-3675-4bd2-871b-101e779fa688",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2023-05-18T18:17:09.404Z",
+    "modified": "2023-05-18T18:17:18.687Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

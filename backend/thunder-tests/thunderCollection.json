@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "9d9b9d6f-d2ff-4577-b769-a4754d438cf8",
+    "colName": "Spacetime API",
+    "created": "2023-05-18T17:58:28.366Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "343fd91d-2fc9-42af-ac09-a22fa8391785",
+        "name": "Memories",
+        "containerId": "",
+        "created": "2023-05-18T17:58:32.901Z",
+        "sortNum": 10000
+      }
+    ]
+  }
+]
