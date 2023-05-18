@@ -8,8 +8,13 @@
     "method": "GET",
     "sortNum": 10000,
     "created": "2023-05-18T17:59:27.562Z",
-    "modified": "2023-05-18T18:01:45.531Z",
-    "headers": [],
+    "modified": "2023-05-18T19:19:55.790Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgQmFycXVlIGRhIFNpbHZhIiwiYXZhdGFyVXJsIjoiaHR0cHM6Ly9hdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbS91Lzg0OTc0MDU_dj00Iiwic3ViIjoiYmEzZDFmYzMtMGRhZS00NzVmLTg5N2EtMjljMDFkOTgyNWZlIiwiaWF0IjoxNjg0NDM3MzU3LCJleHAiOjE2ODcwMjkzNTd9.sRltCNKJKJlGrR9ozoOOctrliZdeXICvlbMyxaxxgfA"
+      }
+    ],
     "params": [],
     "tests": []
   },
@@ -30,18 +35,18 @@
   {
     "_id": "5fd4e751-595c-44c1-8958-73a07dc68e5f",
     "colId": "9d9b9d6f-d2ff-4577-b769-a4754d438cf8",
-    "containerId": "343fd91d-2fc9-42af-ac09-a22fa8391785",
-    "name": "Create",
-    "url": "{{baseUrl}}/memories",
+    "containerId": "4cd1e1b2-0a89-476d-a041-abda8be30175",
+    "name": "Register",
+    "url": "{{baseUrl}}/register",
     "method": "POST",
-    "sortNum": 15000,
+    "sortNum": 5000,
     "created": "2023-05-18T18:12:28.816Z",
-    "modified": "2023-05-18T18:13:30.863Z",
+    "modified": "2023-05-18T19:16:02.689Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"content\": \"test\",\n  \"coverUrl\": \"https://github.com/lucasbarque.png\",\n  \"isPublic\": 1\n}",
+      "raw": "{\n  \"code\": \"97273d88fb3a172b0a57\"\n}",
       "form": []
     },
     "tests": []
@@ -77,6 +82,25 @@
     "modified": "2023-05-18T18:17:18.687Z",
     "headers": [],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e7fafc3c-bab5-4446-809f-b72aab199d34",
+    "colId": "9d9b9d6f-d2ff-4577-b769-a4754d438cf8",
+    "containerId": "343fd91d-2fc9-42af-ac09-a22fa8391785",
+    "name": "Create",
+    "url": "{{baseUrl}}/memories",
+    "method": "POST",
+    "sortNum": 13750,
+    "created": "2023-05-18T18:54:41.437Z",
+    "modified": "2023-05-18T19:16:04.869Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"content\": \"test\",\n  \"coverUrl\": \"https://github.com/lucasbarque.png\",\n  \"isPublic\": 1\n}",
+      "form": []
+    },
     "tests": []
   }
 ]
