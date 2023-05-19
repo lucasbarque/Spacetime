@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { ImageBackground, Text, TouchableOpacity, View } from 'react-native'
 import * as SecureStore from 'expo-secure-store'
-
+import { useRouter } from 'expo-router'
 import {
   useFonts,
   Roboto_400Regular,
@@ -11,16 +11,17 @@ import {
 
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
 
-import blurBG from './assets/luz.png'
-import Stripes from './assets/stripes.svg'
-import Logo from './assets/logo.svg'
+import blurBG from '../assets/luz.png'
+import Stripes from '../assets/stripes.svg'
+import Logo from '../assets/logo.svg'
 import { styled } from 'nativewind'
 import { makeRedirectUri, useAuthRequest } from 'expo-auth-session'
-import { api } from './lib/api'
+import { api } from '../lib/api'
 
 const StyledStripes = styled(Stripes)
 
 export default function App() {
+  const router = useRouter()
   const discovery = {
     authorizationEndpoint: 'https://github.com/login/oauth/authorize',
     tokenEndpoint: 'https://github.com/login/oauth/access_token',
@@ -39,19 +40,21 @@ export default function App() {
     discovery,
   )
 
+  async function handleGitHubOAuthCode(code: string) {
+    const response = await api.post('/register', {
+      code,
+    })
+    const { token } = response.data
+    await SecureStore.setItemAsync('token', token)
+
+    router.push('/memories')
+  }
+
   useEffect(() => {
     if (response?.type === 'success') {
       const { code } = response.params
 
-      api
-        .post('/register', {
-          code,
-        })
-        .then((response) => {
-          const { token } = response.data
-          SecureStore.setItemAsync('token', token)
-        })
-        .catch((error) => console.log(error))
+      handleGitHubOAuthCode(code)
     }
   }, [response])
 
