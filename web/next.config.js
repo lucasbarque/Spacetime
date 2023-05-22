@@ -3,8 +3,7 @@ const nextConfig = {
   images: {
     domains: [
       'avatars.githubusercontent.com',
-      'localhost',
-      '7eac-201-24-160-121.ngrok-free.app',
+      'nlw-spacetime.s3.amazonaws.com',
     ],
   },
 }

@@ -23,13 +23,17 @@
     "colId": "9d9b9d6f-d2ff-4577-b769-a4754d438cf8",
     "containerId": "343fd91d-2fc9-42af-ac09-a22fa8391785",
     "name": "Get By Id",
-    "url": "{{baseUrl}}/memories/8bbd8279-4c6b-4c70-90ac-6710cc731527",
+    "url": "{{baseUrl}}/memories/a3335d51-69c4-48c0-adb6-edca15e230c4",
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-05-18T18:08:23.519Z",
-    "modified": "2023-05-18T18:09:02.204Z",
+    "modified": "2023-05-22T01:28:21.831Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgQmFycXVlIGRhIFNpbHZhIiwiYXZhdGFyVXJsIjoiaHR0cHM6Ly9hdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbS91Lzg0OTc0MDU_dj00Iiwic3ViIjoiYmEzZDFmYzMtMGRhZS00NzVmLTg5N2EtMjljMDFkOTgyNWZlIiwiaWF0IjoxNjg0NTM3Njc3LCJleHAiOjE2ODcxMjk2Nzd9.Jw5g4weStLLIwYNhv6xKneGtm3is3oZXhFDyZJAuPys"
+    },
     "tests": []
   },
   {
@@ -93,13 +97,17 @@
     "method": "POST",
     "sortNum": 13750,
     "created": "2023-05-18T18:54:41.437Z",
-    "modified": "2023-05-18T19:16:04.869Z",
+    "modified": "2023-05-22T00:10:38.172Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"content\": \"test\",\n  \"coverUrl\": \"https://github.com/lucasbarque.png\",\n  \"isPublic\": 1\n}",
+      "raw": "{\n  \"content\": \"test\",\n  \"coverUrl\": \"ee4c9b61-0188-4c86-89e4-52de4e97c4f5.jpg\",\n  \"isPublic\": 1\n}",
       "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgQmFycXVlIGRhIFNpbHZhIiwiYXZhdGFyVXJsIjoiaHR0cHM6Ly9hdmF0YXJzLmdpdGh1YnVzZXJjb250ZW50LmNvbS91Lzg0OTc0MDU_dj00Iiwic3ViIjoiYmEzZDFmYzMtMGRhZS00NzVmLTg5N2EtMjljMDFkOTgyNWZlIiwiaWF0IjoxNjg0NTM3Njc3LCJleHAiOjE2ODcxMjk2Nzd9.Jw5g4weStLLIwYNhv6xKneGtm3is3oZXhFDyZJAuPys"
     },
     "tests": []
   },

@@ -1,11 +1,8 @@
 import { randomUUID } from 'crypto'
 import { FastifyInstance } from 'fastify'
-import { createWriteStream } from 'node:fs'
-import { extname, resolve } from 'node:path'
-import { pipeline } from 'stream'
-import { promisify } from 'util'
-
-const pump = promisify(pipeline)
+import { extname } from 'node:path'
+import { s3Client } from '../lib/aws-s3'
+import { PutObjectCommand } from '@aws-sdk/client-s3'
 
 export async function uploadRoutes(app: FastifyInstance) {
   app.post('/upload', async (request, reply) => {
@@ -31,15 +28,20 @@ export async function uploadRoutes(app: FastifyInstance) {
 
     const fileName = fileId.concat(extension)
 
-    const writeStream = createWriteStream(
-      resolve(__dirname, '../../uploads', fileName),
-    )
+    const fileToUpload = await upload.toBuffer()
+    const command = new PutObjectCommand({
+      Bucket: process.env.AWS_S3_BUCKET_NAME,
+      Key: fileName,
+      Body: fileToUpload,
+      ACL: 'public-read',
+    })
 
-    await pump(upload.file, writeStream)
+    try {
+      await s3Client.send(command)
+    } catch (error) {
+      reply.code(500).send({ error: 'Falha ao realizar o upload do arquivo' })
+    }
 
-    const fullUrl = request.protocol.concat('://').concat(request.hostname)
-    const fileUrl = new URL(`/uploads/${fileName}`, fullUrl).toString()
-
-    return { fileUrl }
+    return { fileName }
   })
 }
